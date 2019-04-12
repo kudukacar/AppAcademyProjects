@@ -23,6 +23,10 @@ class PolyTreeNode
         node.parent = self
     end
 
+    def inspect
+        @value.inspect
+    end
+
     def remove_child(node)
         raise "node is root error" if node.parent.nil?
         node.parent = nil
