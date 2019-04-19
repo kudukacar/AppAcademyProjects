@@ -1,0 +1,31 @@
+div {
+  height: 200px;
+  width: 200px;
+  padding: 50px;
+  border: 5px;
+}
+
+#first-div {
+  background-color: #39cccc;
+}
+
+#second-div {
+  background-color: #ff4136;
+  box-sizing: border-box;
+}
+
+p {
+  background-color: #7fdbff;
+  width: 100px; 
+}
+#custom-div {
+  min-height:10px;
+  background-color: green;
+}
+#imgdiv {
+  min-width:500px;
+}
+
+#imgsrc {
+  width:50%;
+}
