@@ -1,0 +1,23 @@
+<h1>One Single Cat</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">Cat named <%= @cat.name %></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Birthday!</td>
+            <td><%= @cat.birth_date %></td>
+        </tr>
+        <tr>
+            <td>Color</td>
+            <td><%= @cat.color %></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><%= @cat.description %></td>
+        </tr>
+    </tbody>
+</table>
