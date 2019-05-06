@@ -1,0 +1,71 @@
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 15px;
+    font-weight: bold;
+    border-bottom: 1px solid lightgray;
+}
+
+.left-nav > ul,
+.right-nav > ul {
+    display: flex;
+    align-items: center;
+
+}
+
+.left-nav > ul > li {
+    font-family: sans-serif;
+    font-size: 100%;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+
+.right-nav > ul > li > button {
+    font-family: sans-serif;
+    font-size: 100%;
+    text-transform: uppercase;
+    padding: 5px;
+    color: white;
+    
+}
+
+.right-nav > ul > li:last-of-type {
+
+}
+
+.left-nav > ul > li:hover, .right-nav i:hover {
+    color: lightgray;
+}
+.right-nav > ul > li > button:last-of-type:hover {
+   color: rgb(68, 79, 173)
+}
+
+.left-nav span {
+
+}
+
+
+.right-nav i {
+    font-size: 150%;
+    margin: 5px;
+    display: flex;
+    // flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+#subscribe-btn > button {
+    background: rgb(21, 113, 170);
+    margin: 5px;
+    border-radius: 3px;
+
+}
+
+#login-btn > button {
+    background: rgb(21, 113, 170);
+    margin: 5px;
+    border-radius: 3px;
+    
+}

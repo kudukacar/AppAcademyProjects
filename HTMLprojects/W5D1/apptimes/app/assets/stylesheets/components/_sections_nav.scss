@@ -1,0 +1,18 @@
+.sections {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 5px;
+    border-bottom: 1px solid lightgrey;
+
+}
+
+.sections li {
+    padding: 5px 10px;
+   
+}
+
+.sections li:hover{
+ background: lightgrey;
+}
