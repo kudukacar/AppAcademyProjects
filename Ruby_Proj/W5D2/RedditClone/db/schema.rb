@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_07_155409) do
+ActiveRecord::Schema.define(version: 2019_05_07_210242) do
+
+  create_table "comments", force: :cascade do |t|
+    t.text "content", null: false
+    t.integer "user_id", null: false
+    t.integer "post_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "parent_comment_id"
+    t.index ["post_id"], name: "index_comments_on_post_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
 
   create_table "post_subs", force: :cascade do |t|
     t.integer "sub_id", null: false
@@ -25,11 +36,9 @@ ActiveRecord::Schema.define(version: 2019_05_07_155409) do
     t.string "title", null: false
     t.string "url"
     t.text "content"
-    t.integer "sub_id", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["sub_id"], name: "index_posts_on_sub_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -39,7 +48,6 @@ ActiveRecord::Schema.define(version: 2019_05_07_155409) do
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_subs_on_user_id", unique: true
   end
 
   create_table "users", force: :cascade do |t|

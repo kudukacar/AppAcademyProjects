@@ -1,0 +1,17 @@
+<h1><%= @sub.title %></h1>
+<p><%= @sub.description %></p>
+
+<a href="<%= edit_sub_url(@sub) %>">Edit Sub</a>
+<form action="<%= sub_url(@sub.id) %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Remove Sub">
+  </form>
+<a href="<%= subs_url %>">All Subs</a>
+
+<a href="<%= new_post_url %>">Create a Post</a>
+
+<% @sub.posts.each do |post| %>
+<a href="<%= post_url(post.id) %>"><%= post.title %></a>
+<% end %>
+

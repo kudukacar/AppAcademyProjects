@@ -6,10 +6,21 @@ class User < ApplicationRecord
 
     attr_reader :password
     after_initialize :ensure_session_token 
+
     has_many :subs,
-    primary_key: :id,
-    foreign_key: :user_id,
-    class_name: :Sub 
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: :Sub 
+
+    has_many :posts,
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: :Post
+
+    has_many :comments,
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: :Comment
 
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
@@ -17,7 +28,7 @@ class User < ApplicationRecord
         nil
     end
 
-    def is_password(password)
+    def is_password?(password)
         BCrypt::Password.new(self.password_digest).is_password?(password)
     end
 
