@@ -1,0 +1,29 @@
+/* PHASE 2: Notifications */
+.badge {
+    position:relative;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: black;
+    width: 20px;
+}
+
+/* .badge[data-badge]:after {
+    border-radius:50%;
+} */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: aqua;
+    padding: 12px 16px;
+    z-index: 10;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
