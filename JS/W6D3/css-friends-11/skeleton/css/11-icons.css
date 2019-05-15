@@ -1,0 +1,45 @@
+/* PHASE 11: Icons */
+[class*="icon-comment"] {
+    background-image: url("https://assets.aaonline.io/fullstack/html-css/micro-projects/css-friends/docs/images/sprite.png");
+    background-size: 20px;
+    background-position: top;
+    display: inline-block;
+    width: 22px;
+    height: 0px;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+[class*="icon-comment"]:hover{
+    background-position: 50% 10%;
+}
+
+[class*="icon-reblog"] {
+    background-image: url("https://assets.aaonline.io/fullstack/html-css/micro-projects/css-friends/docs/images/sprite.png");
+    background-size: 20px;
+    background-position: 50% 45%;
+    display: inline-block;
+    width: 22px;
+    height: 0px;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+[class*="icon-reblog"]:hover{
+    background-position: 50% 56%;
+}
+
+[class*="icon-favorite"] {
+    background-image: url("https://assets.aaonline.io/fullstack/html-css/micro-projects/css-friends/docs/images/sprite.png");
+    background-size: 20px;
+    background-position: 50% 23%;
+    display: inline-block;
+    width: 22px;
+    height: 0px;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+[class*="icon-favorite"]:hover{
+    background-position: 50% 34%;
+}
